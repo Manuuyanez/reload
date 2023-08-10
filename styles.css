@@ -1,0 +1,560 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Sans;
+    src: url(ASSETS/PT_Sans/PTSans-Bold.ttf);
+}
+
+
+.grid-container{
+    width: 100%;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px 50px;
+    grid-template-areas: 
+    "header promo1 contactos"
+    "categorias categorias buscar"
+    ;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+
+    
+}
+
+.header img{
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    
+    
+}
+
+.promo1{
+    grid-area: promo1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.promo1 h4{
+    font-size: 20px;
+}
+
+.promo1 img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+
+
+
+.contactos{
+    grid-area: contactos;
+    
+    
+}
+
+.contactos ul{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    margin: 20px;
+    
+}
+
+.contactos ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.categorias{
+    grid-area: categorias;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    
+}
+
+.categorias ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.categorias ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.buscar{
+    grid-area: buscar;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -50px;
+    
+    
+}
+
+
+.buscar input{
+    text-align: center;
+    
+}
+
+.buscar img{
+    width: 35px;
+    height: 35px;
+    margin-left: -40px;
+    
+}
+
+
+@media screen and (max-width: 1350px){
+    .buscar img{
+        width: 35px;
+        height: 35px;
+        margin-top: -40px;
+        margin-left: 5px;
+        
+
+    }
+
+    .buscar{
+        max-width: 700px;
+        max-height: 800px;
+        
+        margin-left: -40px;
+    }
+}
+
+
+
+@media screen and (max-width: 1025px) {
+
+   .promo1 h4{
+    font-size: 16px;
+   }
+    .promo1 img{
+        width: 30px;
+        height: 30px;
+        
+    }
+
+    .buscar{
+        max-width: 700px;
+        max-height: 800px;
+        
+        margin-left: -40px;
+    }
+
+    .buscar img{
+        width: 30px;
+        height: 30px;
+        margin-top: -40px;
+        margin-right: -5px;
+    }
+
+}
+
+
+@media screen and (min-width: 800px) {
+    
+    .navburguer{
+        display: none;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    .grid-container{
+        display: none;
+    }
+}
+
+
+
+
+
+.main-grid{
+    width: 100%;
+    background-image: url(images/fondo-main.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px 200px 200px 1fr;
+    grid-template-areas: 
+    "promo foto foto"
+    "promo foto foto"
+    "promo foto foto"
+    ;
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .main-grid{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+    
+}
+
+
+.promo{
+    grid-area: promo;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    
+   
+
+
+}
+
+.promo h2{
+    border: 1px solid white;
+    background-color: aliceblue;
+    box-shadow: 2px 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+.grid-footer{
+width: 100%;
+height: 100%;
+font-family: 'Open Sans', sans-serif;
+display: grid;
+background-color: black;
+margin-top: 5px;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 200px 1fr 50px;
+grid-template-areas: 
+"registro registro registro registro"
+"logo redes contacto info"
+"masinfo masinfo masinfo masinfo"
+
+;
+}
+
+
+@media screen and (max-width: 800px){
+
+    .grid-footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows:  400px ;
+        grid-template-areas: 
+        "registro"
+        "redes"
+        "contacto"
+        "info"
+        "masinfo"
+        "logo"
+
+
+    }
+
+    .masinfo ul{
+        flex-direction: column;
+    }
+
+}
+
+
+
+.invite {
+    grid-area: registro;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+   
+}
+
+
+
+.boton{
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+
+}
+
+.boton a{
+    text-decoration: none;
+    color: white;
+}
+
+.boton:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+.invite h3{
+    margin: 20px;
+}
+
+.logo-footer{
+    grid-area: logo;
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+
+ 
+}
+
+@media screen and (max-width: 800px){
+    .logo-footer{
+       justify-content: center;
+       margin: 0px;
+       padding: 0px;
+    }
+}
+
+
+.logo-footer img{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+
+.logo-footer h2{
+    margin-bottom: -2px;
+}
+
+.redes{
+    display: flex;
+    grid-area: redes;
+    color: white;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+   
+  
+}
+
+@media screen and (max-width: 800px){
+    .redes{
+        margin: 30px;
+    }
+}
+
+
+
+.redeslist ul li {
+   list-style: none;
+   margin-left: -30px;
+  
+ 
+
+}
+
+.redeslist ul li a{
+    text-decoration: none;
+    color: white;
+   
+}
+
+.redeslist ul li img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+   
+}
+
+.contacto-footer{
+    grid-area: contacto;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 800px){
+    .contacto-footer{
+        margin: 30px;
+    }
+}
+
+.contactolist ul li{
+    list-style: none;
+    margin-left: -20px;
+}
+
+.contactolist ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.contactolist ul li img{
+    width: 30px;
+    height: 30px;
+   margin: 1px;
+
+}
+
+.info-footer{
+   grid-area: info;
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   color: white;
+   padding: 20px;
+   text-align: center;
+   margin-top: 5px;
+
+}
+
+@media screen and (max-width: 800px){
+    .info-footer{
+        margin: 60px;
+        justify-content: flex-end;
+    }
+}
+
+.info-footer h5 img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.masinfo{
+    grid-area: masinfo;
+    max-width: 100%;
+    background-color: white;
+   
+}
+
+
+.masinfo ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+   
+}
+
+@media screen and (max-width: 800px){
+    .masinfo ul{
+        font-size: 30px;
+        align-items: center;
+    }
+}
+
+.masinfo ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.registrateahora{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.formulario{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.ingreso{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+}
+
+
+
+
+col{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.card{
+    display: flex;
+    
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+
+}
